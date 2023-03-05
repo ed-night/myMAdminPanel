@@ -54,19 +54,10 @@ app.post('/initializeDatabase', async (req, res) => {
     const connection = await connect();
     let queryText = "";
 
-    await query(`DROP TABLE IF EXISTS colors;`, connection);
-    queryText = `
-    CREATE TABLE colors (
-        id INT AUTO_INCREMENT,
-        model_id INT,
-        color VARCHAR(50),
-        color_hex VARCHAR(7),
-        PRIMARY KEY (id),
-        CONSTRAINT fk_model
-            FOREIGN KEY (model_id)
-            REFERENCES smartphones (id)
-    )`;
-    await query(queryText, connection);
+    await query(`ALTER TABLE smartphones DROP CONSTRAINT fk_os`, connection);
+    await query(`ALTER TABLE smartphones DROP CONSTRAINT fk_platform`, connection);
+    await query(`ALTER TABLE smartphones DROP CONSTRAINT fk_brand`, connection);
+    await query(`ALTER TABLE colors DROP CONSTRAINT fk_model`, connection);
 
     await query(`DROP TABLE IF EXISTS os`, connection);
     queryText = `
@@ -117,13 +108,31 @@ app.post('/initializeDatabase', async (req, res) => {
         PRIMARY KEY (id),
         CONSTRAINT fk_os
             FOREIGN KEY (os_id)
-            REFERENCES os (id),
+            REFERENCES os (id)
+            ON DELETE CASCADE,
         CONSTRAINT fk_platform
             FOREIGN KEY (platform_id)
-            REFERENCES platforms (id),
+            REFERENCES platforms (id)
+            ON DELETE CASCADE,
         CONSTRAINT fk_brand
             FOREIGN KEY (brand_id)
             REFERENCES brands (id)
+            ON DELETE CASCADE
+    )`;
+    await query(queryText, connection);
+    
+    await query(`DROP TABLE IF EXISTS colors;`, connection);
+    queryText = `
+    CREATE TABLE colors (
+        id INT AUTO_INCREMENT,
+        model_id INT,
+        color VARCHAR(50),
+        color_hex VARCHAR(7),
+        PRIMARY KEY (id),
+        CONSTRAINT fk_model
+            FOREIGN KEY (model_id)
+            REFERENCES smartphones (id)
+            ON DELETE CASCADE
     )`;
     await query(queryText, connection);
 
@@ -146,8 +155,8 @@ app.post('/initializeDatabase', async (req, res) => {
         }
         for (const smartphone of jsonData.smartphones) {
             const { model, brand_id, releaseDate, height, width, depth, screen_size, weight, price, discount, battery_capacity, os_id, platform_id } = smartphone;
-            const queryText = `INSERT INTO smartphones (model, brand_id, releaseDate, height, width, depth, screen_size, weight, price, discount, battery_capacity, os_id, platform_id) VALUES ("${model}", ${brand_id}, "${releaseDate}", "${height}", "${width}", "${depth}", "${screen_size}", "${weight}", "${price}", "${discount}", "${battery_capacity}", ${os_id}, ${platform_id})`;
-            const queryResponse = await query(queryText, connection);
+            const queryText = `INSERT INTO smartphones (model, brand_id, releaseDate, height, width, depth, screen_size, weight, price, discount, battery_capacity, os_id, platform_id) VALUES ("${model}", ${brand_id}, "${releaseDate}", ${height}, ${width}, ${depth}, ${screen_size}, ${weight}, ${price}, ${discount}, ${battery_capacity}, ${os_id}, ${platform_id})`;
+            await query(queryText, connection);
         }
         for (const colorObj of jsonData.colors) {
             const { model_id, color, color_hex } = colorObj;

@@ -16,7 +16,6 @@ exit.addEventListener('click', (e) => {
     popup.classList.toggle('popup2');
 });
 
-const crTable = document.querySelector('.create-table');
 const getFormData = (form) => {
 	let ob = {};
 	let data = new FormData(form);
@@ -51,17 +50,9 @@ const sendGetRequest = async (url) => {
 //     obj1 = getFormData(formPlatform);
 //     console.log(parseJsonResponse(sendPostRequest('http://localhost:3000/addPlatform', obj1)));
 // });
-crTable.addEventListener('click', async () => {
-    let obj = await sendPostRequest('http://localhost:3000/createOSTable', {});
+const hzor = document.querySelector('.hzor');
+hzor.addEventListener('click', async () => {
+    let obj = await sendPostRequest('http://localhost:3000/initializeDatabase', {});
     let res = await obj.json();
-    console.log(res);
-    obj = await sendPostRequest('http://localhost:3000/createPlatformsTable', {});
-    res = await obj.json();
-    console.log(res);
-    obj = await sendPostRequest('http://localhost:3000/createSmartphonesTable', {});
-    res = await obj.json();
-    console.log(res);
-    obj = await sendPostRequest('http://localhost:3000/createColorsTable', {});
-    res = await obj.json();
     console.log(res);
 });
