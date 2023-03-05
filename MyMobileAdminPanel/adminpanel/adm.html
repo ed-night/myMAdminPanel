@@ -38,45 +38,75 @@
             </div>
         </header>
         <main>
+            <div class="parent-hzor">
+                <button class="hzor">INITIALIZE DATABASE</button>
+            </div>           
             <div class="parent-cat">
                 <div class="categories">
                     <button>Phones</button>
                     <button>Platform</button>
                     <button>Color</button>
                     <button>OS</button>
+                    <button>Brand</button>
                 </div>
             </div>
             <div class="add">
-                <button class="addbtn">Add</button>
-                <button>Create Table</button>
+                <button class="addbtn">Add</button>               
             </div>
             <div class="parent-table">
                 <table>
+                       <tr>
+                            <th class="id">ID</th>
+                            <th>Model</th>
+                            <th>Date</th>
+                            <th>Height</th>
+                            <th>Width</th>
+                            <th>Depth</th>
+                            <th>Weight</th>
+                            <th>Price</th>
+                            <th>Battery</th>
+                            <th>OS</th>
+                            <th>Platform</th>
+                            <th class="action">Action</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td class="act">
+                                <div>
+                                    <img src="x.png" alt="">
+                                </div>
+                                <div class="edit">
+                                    <img src="edit.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                </table>
+                <table>
                     <tr>
-                        <th>ID</th>
-                        <th>Model</th>
-                        <th>Date</th>
-                        <th>Dimensions</th>
-                        <th>Weight</th>
-                        <th>Price</th>
-                        <th>Battery</th>
-                        <th>OS</th>
-                        <th>Platform</th>
-                        <th>Action</th>
+                        <th class="id">ID</th>
+                        <th>Chipset</th>
+                        <th>Cpu</th>
+                        <th>Gpu</th>
+                        <th class="action">Action</th>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
                         <td class="act">
                             <div>
-                                <img src="x.png" alt="">                                
+                               <img src="x.png" alt="">                                
                             </div>
                             <div class="edit">
                                 <img src="edit.png" alt="">                                
@@ -84,6 +114,67 @@
                         </td>
                     </tr>
                 </table>
+                    <table>   
+                            <tr>
+                                <th class="id">ID</th>
+                                <th>Smartphone</th>
+                                <th>Color Name</th>
+                                <th>Color Hex</th>
+                                <th class="action">Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td class="act">
+                                    <div>
+                                        <img src="x.png" alt="">                                
+                                    </div>
+                                    <div class="edit">
+                                        <img src="edit.png" alt="">                                
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
+                    <table>
+                            <tr>
+                                <th class="id">ID</th>
+                                <th>Name</th>
+                                <th class="action">Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="act">
+                                    <div>
+                                        <img src="x.png" alt="">                                
+                                    </div>
+                                    <div class="edit">
+                                        <img src="edit.png" alt="">                                
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
+                    <table>
+                            <tr>
+                                <th class="id">ID</th>
+                                <th>Name</th>
+                                <th class="action">Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="act">
+                                    <div>
+                                        <img src="x.png" alt="">                                
+                                    </div>
+                                    <div class="edit">
+                                        <img src="edit.png" alt="">                                
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
             </div>
         </main>
     </div>
@@ -108,6 +199,7 @@
                 <input class="input" placeholder="Discount" id="discount" name="discount" type="number">
                 <input class="input" placeholder="Battery Capacity" id="battery_capacity" name="battery_capacity" type="text">
                 <input class="input" placeholder="Size" id="screen_size" name="screen_size" type="text">
+                <input class="input" placeholder="Brand ID" id="barnd_id" name="brand_id" type="number">
                 <select name="os_id" id="os_id">
                     <option value="0" disabled selected hidden>OS</option>
                 </select>
