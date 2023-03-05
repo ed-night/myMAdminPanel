@@ -1,0 +1,72 @@
+{
+    "platforms": [
+        {
+            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
+            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
+            "gpu": "Adreno 740"
+        },
+        {
+            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
+            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
+            "gpu": "Adreno 750"
+        },
+        {
+            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
+            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
+            "gpu": "Adreno 760"
+        },
+        {
+            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
+            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
+            "gpu": "Adreno 770"
+        }
+    ],
+    "os": [
+        {
+            "name": "Android 13, One UI 5.1"
+        },
+        {
+            "name": "Android 14, One UI 5.1"
+        },
+        {
+            "name": "Android 15, One UI 5.1"
+        }
+    ],
+    "colors": [
+        {
+            "model_id": 1,
+            "color": "Phantom-Black",
+            "color_hex": "#000000"
+        },
+        {
+            "model_id": 2,
+            "color": "Phantom-White",
+            "color_hex": "#ffffff"
+        }
+    ],
+    "smartphones": [
+        {
+            "model": "Samsung Galaxy S23 Ultra",
+            "brand": 1,
+            "releaseDate": "",
+            "height": "",
+            "width": "",
+            "depth": "",
+            "screen_size": "",
+            "weight": "",
+            "price": "",
+            "discount": "",
+            "battery_capacity": "",
+            "os_id": "",
+            "platform_id": ""
+        }
+    ],
+    "brands": [
+        {
+            "name": "Samsung"
+        },
+        {
+            "name": "Apple"
+        }
+    ]
+}
