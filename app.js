@@ -7,6 +7,10 @@ const getFormData = (form) => {
 	return ob;
 }
 
+const parseJsonResponse = async (response) => {
+    return await (await response).json();
+}
+
 const sendPostRequest = async (url, data) => {
 	return await fetch(url, {
 		method: 'POST',
@@ -17,13 +21,16 @@ const sendPostRequest = async (url, data) => {
 	});
 }
 
+const sendGetRequest = async (url) => {
+    return await fetch(url);
+}
+
 const formPlatform = document.querySelector('.platform');
 let obj1 = {};
 formPlatform.addEventListener('submit', async (e) => {
     e.preventDefault();
     obj1 = getFormData(formPlatform);
-    const jsonAw = await sendPostRequest('http://localhost:3000/addPlatform', obj1);
-    console.log(await jsonAw.json());
+    console.log(parseJsonResponse(sendPostRequest('http://localhost:3000/addPlatform', obj1)));
 });
 
 
