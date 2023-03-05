@@ -5,41 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        form {
-            padding: 15px;
-            width: 400px;
-            display: flex;
-            flex-direction: column;
-        }
-        input {
-            padding: 5px;
-            margin: 10px 0;
-            font-size: 24px;
-        }
-        button {
-            width: 30%;
-            padding: 5px 15px;
-            background-color: aqua;
-            border-radius: 20px;
-            border: none;
-            color: blue;
-            font-weight: 800;
-        }
-        button:hover {
-            background-color: rgb(255, 125, 125);
-            font-weight: 800;
-            color: rgb(54, 0, 0);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <form class="phones">
         <h3>PHONES</h3>
         <input placeholder="Model" id="model" name="model" type="text">
@@ -48,7 +18,14 @@
         <input placeholder="Weight" id="weight" name="weight" type="number">
         <input placeholder="Price" id="price" name="price" type="number">
         <input placeholder="Battery" id="battery" name="battery" type="text">
+        <select name="os_id" id="os_id">
+            <option value="0" disabled selected hidden>OS</option>
+        </select>
+        <select name="platform_id" id="platform_id">
+            <option value="0" disabled selected hidden>Platform</option>
+        </select>
         <button type="submit">SEND</button>
+
     </form>
     <form class="os">
         <h3>OS</h3>
@@ -62,10 +39,17 @@
         <input placeholder="GPU" id="gpu" name="gpu" type="text">
         <button type="submit">SEND</button>
     </form>
-    <form class="">
-
+    <form class="colors">
+        <h3>Colors</h3>
+        <select name="phone_id" id="phone_id">
+            <option value="0" disabled selected hidden>Smartphone</option>
+        </select>
+        <input placeholder="Color Name" name="name" id="name" type="text">
+        <input placeholder="Color HEX" name="hex" id="hex" type="text">
     </form>
 
+    
+    <script src="platform.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
