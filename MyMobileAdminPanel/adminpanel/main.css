@@ -154,6 +154,17 @@ main {
     align-items: center;
 }
 
+.parent-hzor {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.hzor {
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+}
+
 .categories {
     width: 85%;
     height: 60px;
@@ -187,6 +198,14 @@ table {
 
 table, td, th {
     border: 1px solid #000000;
+}
+
+.id {
+    width: 50px;
+}
+
+.action {
+    width: 100px;
 }
 
 .act {
