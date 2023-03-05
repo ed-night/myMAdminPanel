@@ -39,7 +39,7 @@
             "color_hex": "#000000"
         },
         {
-            "model_id": 2,
+            "model_id": 1,
             "color": "Phantom-White",
             "color_hex": "#ffffff"
         }
@@ -47,18 +47,18 @@
     "smartphones": [
         {
             "model": "Samsung Galaxy S23 Ultra",
-            "brand": 1,
-            "releaseDate": "",
-            "height": "",
-            "width": "",
-            "depth": "",
-            "screen_size": "",
-            "weight": "",
-            "price": "",
-            "discount": "",
-            "battery_capacity": "",
-            "os_id": "",
-            "platform_id": ""
+            "brand_id": 1,
+            "releaseDate": "2023-03-14",
+            "height": 160.4,
+            "width": 140.5,
+            "depth": 8,
+            "screen_size": 150,
+            "weight": 200,
+            "price": 1000,
+            "discount": 0,
+            "battery_capacity": 5000,
+            "os_id": 1,
+            "platform_id": 1
         }
     ],
     "brands": [
