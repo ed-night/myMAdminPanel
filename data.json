@@ -1,72 +1,124 @@
-{
+{  
+    "brands": [
+        {
+            "name": "Apple"   
+        },
+        {
+            "name": "Samsung"
+        }
+    ],
+    "smartphones": [
+        {
+            "model": "iPhone 14 Pro Max",
+            "brand_id": 1,
+            "releaseDate": "2022-09-07",
+            "height": 160.7,
+            "width": 77.6,
+            "depth": 7.9 ,
+            "screen_size": 6.7,
+            "weight": 240,
+            "price": 999,
+            "discount": 0,
+            "battery_capacity": 4323,
+            "os_id": 1,
+            "platform_id": 1
+        },
+        {
+            "model": "iPhone 14 Pro",
+            "brand_id": 1,
+            "releaseDate": "2022-09-07",
+            "height": 147.5,
+            "width": 71.5,
+            "depth": 7.9 ,
+            "screen_size": 6.1,
+            "weight": 206,
+            "price": 899,
+            "discount": 0,
+            "battery_capacity": 3200,
+            "os_id": 1,
+            "platform_id": 1
+        },
+        {
+            "model": "Samsung Galaxy S23 Ultra",
+            "brand_id": 2,
+            "releaseDate": "2023-02-01",
+            "height": 163.4,
+            "width": 78.1,
+            "depth": 8.9,
+            "screen_size": 6.8,
+            "weight": 234,
+            "price": 900,
+            "discount": 0,
+            "battery_capacity": 5000,
+            "os_id": 2,
+            "platform_id": 2
+        },
+        {
+            "model": "Samsung Galaxy S23+",
+            "brand_id": 2,
+            "releaseDate": "2023-02-01",
+            "height": 157.8,
+            "width": 76.2,
+            "depth": 7.6,
+            "screen_size": 6.6,
+            "weight": 196,
+            "price": 900,
+            "discount": 0,
+            "battery_capacity": 4700,
+            "os_id": 2,
+            "platform_id": 2
+        }
+    ],
     "platforms": [
+        {
+            "chipset": "Apple A16 Bionic (4 nm)",
+            "cpu": "Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)",
+            "gpu": "Apple GPU (5-core graphics)"
+        },
         {
             "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
             "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
             "gpu": "Adreno 740"
-        },
-        {
-            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
-            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
-            "gpu": "Adreno 750"
-        },
-        {
-            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
-            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
-            "gpu": "Adreno 760"
-        },
-        {
-            "chipset": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)",
-            "cpu": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)",
-            "gpu": "Adreno 770"
         }
     ],
     "os": [
         {
+            "name": "iOS 16, upgradable to iOS 16.3"
+        },
+        {
             "name": "Android 13, One UI 5.1"
-        },
-        {
-            "name": "Android 14, One UI 5.1"
-        },
-        {
-            "name": "Android 15, One UI 5.1"
         }
     ],
     "colors": [
         {
             "model_id": 1,
-            "color": "Phantom-Black",
-            "color_hex": "#000000"
+            "color": "Deep-Purple",
+            "color_hex": "#ff1493"
         },
         {
             "model_id": 1,
-            "color": "Phantom-White",
-            "color_hex": "#ffffff"
-        }
-    ],
-    "smartphones": [
-        {
-            "model": "Samsung Galaxy S23 Ultra",
-            "brand_id": 1,
-            "releaseDate": "2023-03-14",
-            "height": 160.4,
-            "width": 140.5,
-            "depth": 8,
-            "screen_size": 150,
-            "weight": 200,
-            "price": 1000,
-            "discount": 0,
-            "battery_capacity": 5000,
-            "os_id": 1,
-            "platform_id": 1
-        }
-    ],
-    "brands": [
-        {
-            "name": "Samsung"
+            "color": "Space-Black",
+            "color_hex": "#000000"
         },
         {
-            "name": "Apple"
+            "model_id": 2,
+            "color": "Silver",
+            "color_hex": "#c0c0c0"
+        },
+        {
+            "model_id": 2,
+            "color": "Gold",
+            "color_hex": "#ffd700"
+        },
+        {
+            "model_id": 3,
+            "color": "Green",
+            "color_hex": "#008000"
+        },
+        {
+            "model_id": 4,
+            "color": "Black",
+            "color_hex": "#000000"
         }
     ]
 }
